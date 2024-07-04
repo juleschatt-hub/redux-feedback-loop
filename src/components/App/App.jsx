@@ -36,24 +36,27 @@ function App() {
           <h1 className='App-title'>Feedback!</h1>
           <h4>Don't forget it!</h4>
         </header>
-        <Route exact path='/'>
-          <Feeling />
-        </Route>
-        <Route path='/understanding'>
-          <Understanding />
-        </Route>
-        <Route path='/supported'>
-          <Supported />
-        </Route>
-        <Route path='/comments'>
-          <Comments />
-        </Route>
-        <Route path='/review'>
-          <Review />
-        </Route>
-        <Route path='/thank'>
-          <Thank />
-        </Route>
+        <form>
+          <Route exact path='/'>
+            <Feeling />
+          </Route>
+          <Route path='/understanding'>
+            <Understanding />
+          </Route>
+          <Route path='/supported'>
+            <Supported />
+          </Route>
+          <Route path='/comments'>
+            <Comments />
+          </Route>
+          <Route path='/review'>
+            <Review />
+          </Route>
+        </form>
+          <Route path='/thank'>
+            <Thank />
+          </Route>
+        
       </div>
     </Router>
   );
