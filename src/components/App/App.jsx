@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
-
-import Feeling from '../Feeling/Feeling.jsx';
-
 import { HashRouter as Router, Route } from 'react-router-dom';
+
+import Understanding from '../Understanding/Understanding.jsx';
+import Feeling from '../Feeling/Feeling.jsx';
+import Supported from '../Supported/Supported.jsx';
+import Comments from '../Comments/Comments.jsx';
 
 function App() {
 
@@ -34,6 +36,15 @@ function App() {
         </header>
         <Route exact path='/'>
           <Feeling />
+        </Route>
+        <Route path='/understanding'>
+          <Understanding />
+        </Route>
+        <Route path='/supported'>
+          <Supported />
+        </Route>
+        <Route path='/comments'>
+          <Comments />
         </Route>
       </div>
     </Router>
