@@ -7,6 +7,8 @@ import Understanding from '../Understanding/Understanding.jsx';
 import Feeling from '../Feeling/Feeling.jsx';
 import Supported from '../Supported/Supported.jsx';
 import Comments from '../Comments/Comments.jsx';
+import Review from '../Review/Review.jsx';
+import Thank from '../Thank/Thank.jsx';
 
 function App() {
 
@@ -45,6 +47,12 @@ function App() {
         </Route>
         <Route path='/comments'>
           <Comments />
+        </Route>
+        <Route path='/review'>
+          <Review />
+        </Route>
+        <Route path='/thank'>
+          <Thank />
         </Route>
       </div>
     </Router>

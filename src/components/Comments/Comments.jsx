@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Comments() {
     return (
         <>
@@ -5,7 +7,9 @@ function Comments() {
             <form>
                 <label htmlFor="comments">Comments: </label>
                 <input type="text" name="" id="comments" placeholder="Comments or Concerns" />
-                <button type="button" data-test-id="next">Next</button>
+                <Link to='/review'>
+                    <button type="button" data-testid="next">Next</button>
+                </Link>
             </form>
         </>
     )

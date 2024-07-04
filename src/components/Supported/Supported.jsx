@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Supported() {
     return (
         <>
@@ -5,7 +7,9 @@ function Supported() {
             <form>
                 <label htmlFor="supported">Support? </label>
                 <input type="text" name="" id="supported" placeholder="1-5" />
-                <button type="button" data-test-id="next">Next</button>
+                <Link to='/comments'>
+                    <button type="button" data-testid="next">Next</button>
+                </Link>
             </form>
         </>
     )

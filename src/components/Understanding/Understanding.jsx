@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Understanding() {
     return (
         <>
@@ -5,7 +7,9 @@ function Understanding() {
             <form>
                 <label htmlFor="understanding">Understanding? </label>
                 <input type="number" name="" id="understanding" placeholder="1-5" />
-                <button type="button" data-test-id="next">Next</button>
+                <Link to='/supported'>
+                    <button type="button" data-testid="next">Next</button>
+                </Link>
             </form>
         </>
     )

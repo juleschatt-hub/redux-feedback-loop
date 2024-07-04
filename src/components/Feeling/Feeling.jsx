@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Feeling() {
     return (
         <>
@@ -5,7 +7,9 @@ function Feeling() {
             <form>
                 <label htmlFor="feeling">Feeling? </label>
                 <input type="number" name="" id="feeling" placeholder="1-5" />
-                <button type="button" data-test-id="next">Next</button>
+                <Link to='/understanding'>
+                    <button type="button" data-testid="next">Next</button>
+                </Link>
             </form>
         </>
     )
