@@ -9,8 +9,10 @@ import Supported from '../Supported/Supported.jsx';
 import Comments from '../Comments/Comments.jsx';
 import Review from '../Review/Review.jsx';
 import Thank from '../Thank/Thank.jsx';
+import { useDispatch } from 'react-redux';
 
 function App() {
+  const dispatch = useDispatch();
 
   const [feedBackList, setFeedbackList] = useState([])
   useEffect (() => {
@@ -22,7 +24,7 @@ function App() {
     axios.get('/api/feedback')
       .then((response) => {
         console.log('GET /api/feedback success:', response.data);
-        setFeedbackList(response.data);
+        dispatch({type:'SET_FEEDBACK', payload: response.data});
       })
       .catch((error) => {
         console.log('Error getting feedback:', error);
