@@ -15,21 +15,21 @@ function App() {
   const dispatch = useDispatch();
 
   const [feedBackList, setFeedbackList] = useState([])
-  useEffect (() => {
-    fetchFeedback();
-  }, [])
+  // useEffect (() => {
+  //   fetchFeedback();
+  // }, [])
 
 
-  const fetchFeedback = () => {
-    axios.get('/api/feedback')
-      .then((response) => {
-        console.log('GET /api/feedback success:', response.data);
-        dispatch({type:'SET_FEEDBACK', payload: response.data});
-      })
-      .catch((error) => {
-        console.log('Error getting feedback:', error);
-      })
-  }
+  // const fetchFeedback = () => {
+  //   axios.get('/api/feedback')
+  //     .then((response) => {
+  //       console.log('GET /api/feedback success:', response.data);
+  //       dispatch({type:'SET_FEEDBACK', payload: response.data});
+  //     })
+  //     .catch((error) => {
+  //       console.log('Error getting feedback:', error);
+  //     })
+  //}
   
   return (
     <Router>
@@ -38,7 +38,6 @@ function App() {
           <h1 className='App-title'>Feedback!</h1>
           <h4>Don't forget it!</h4>
         </header>
-        <form>
           <Route exact path='/'>
             <Feeling />
           </Route>
@@ -54,7 +53,6 @@ function App() {
           <Route path='/review'>
             <Review />
           </Route>
-        </form>
           <Route path='/thank'>
             <Thank />
           </Route>

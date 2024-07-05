@@ -10,13 +10,15 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
 //FEEDBACK REDUCER
-const feedback = (state = [], action) => {
+const feedback = (state = {
+    feeling: ''
+}, action) => {
 
     if(action.type === 'SET_FEELING') {
-        return action.payload;
+        return action.payload
         }
 
-    return state;
+    return state
 } //END FEEDBACK REDUCER
 
 //STORE
