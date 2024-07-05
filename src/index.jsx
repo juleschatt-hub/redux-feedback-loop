@@ -11,10 +11,23 @@ import logger from 'redux-logger';
 
 //FEEDBACK REDUCER
 const feedback = (state = {
-    feeling: ''
+    feeling: '',
+    understanding: '',
+    support: '',
+    comments: ''
+
 }, action) => {
 
     if(action.type === 'SET_FEELING') {
+        return action.payload
+        }
+    if(action.type === 'SET_UNDERSTANDING') {
+        return action.payload
+        }
+    if(action.type === 'SET_SUPPORTED') {
+        return action.payload
+        }
+    if(action.type === 'SET_COMMENTS') {
         return action.payload
         }
 
