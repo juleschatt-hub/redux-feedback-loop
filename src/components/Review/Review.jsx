@@ -1,19 +1,31 @@
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
 
 function Review() {
+
+  useEffect (() => {
+    fetchFeedback();
+  }, [])
+
+  const fetchFeedback = () => {
+    axios.get('/api/feedback')
+      .then((response) => {
+        console.log('GET /api/feedback success:', response.data);
+        
+      })
+      .catch((error) => {
+        console.log('Error getting feedback:', error);
+      })
+  }
+
     const feedback = useSelector(store => store.feedback);
-     
-    
     const addFeeling = (event) => {
         event.preventDefault();
-
         axios.post('/api/feedback', feedback)
             .then((response) => {
-                console.log('Feeling post', response.data);
-                
-                
+                console.log('Feeling post', response.data);             
             })
             .catch((error) => {
                 console.log('error posting feeling:', error);

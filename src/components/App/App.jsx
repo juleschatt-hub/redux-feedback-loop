@@ -14,22 +14,22 @@ import { useDispatch } from 'react-redux';
 function App() {
   const dispatch = useDispatch();
 
-  const [feedBackList, setFeedbackList] = useState([])
-  useEffect (() => {
-    fetchFeedback();
-  }, [])
+  // const [feedBackList, setFeedbackList] = useState([])
+  // useEffect (() => {
+  //   fetchFeedback();
+  // }, [])
 
 
-  const fetchFeedback = () => {
-    axios.get('/api/feedback')
-      .then((response) => {
-        console.log('GET /api/feedback success:', response.data);
-        // dispatch({type:'SET_FEEDBACK', payload: response.data});
-      })
-      .catch((error) => {
-        console.log('Error getting feedback:', error);
-      })
-  }
+  // const fetchFeedback = () => {
+  //   axios.get('/api/feedback')
+  //     .then((response) => {
+  //       console.log('GET /api/feedback success:', response.data);
+        
+  //     })
+  //     .catch((error) => {
+  //       console.log('Error getting feedback:', error);
+  //     })
+  // }
   
   return (
     <Router>
