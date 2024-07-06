@@ -7,7 +7,7 @@ import axios from 'axios';
 function Feeling() {
     const dispatch = useDispatch();
     const feedback = useSelector(store => store.feedback);
-    let [feedbackToAdd, setFeedbackToAdd] = useState({feeling: '', understanding:''});
+    let [feedbackToAdd, setFeedbackToAdd] = useState({feeling: ''});
 
     const handleFeelingChange = (event) =>{
         setFeedbackToAdd({
@@ -45,10 +45,7 @@ function Feeling() {
                 <Link to='/understanding'>
                     <button type="submit" onClick={() => dispatch({type: 'SET_FEELING', payload: feedbackToAdd.feeling})} data-testid="next">Next</button>
                 </Link>
-                {/* <ul>
-                    {feedback.map((item, i) => <li key={i}>{item.feeling}{item.support}</li> )}
-                </ul> */}
-            
+               
         </>
     )
 }
