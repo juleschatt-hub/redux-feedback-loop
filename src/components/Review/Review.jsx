@@ -30,9 +30,9 @@ function Review() {
             <h3>Support: {feedback.support}</h3>
             <h3>Comments: {feedback.comments}</h3>
             {/* <form onSubmit={(event) => addFeeling(event)}> */}
-               <Link to='/thank'>
-                    <button type="submit" data-testid="next" onClick={(event => addFeeling(event))}>Submit</button>
-               </Link>
+               {/* <Link to='/thank'> */}
+                    <button type="submit" data-testid="next" onClick={(event => addFeeling(event))}><Link to='/thank'>Submit</Link></button>
+               {/* </Link> */}
             {/* </form> */}
         </>
     )

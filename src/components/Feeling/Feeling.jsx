@@ -27,6 +27,7 @@ function Feeling() {
                 placeholder="1-5"
                 value={feedbackToAdd.feeling} 
                 onChange={handleFeelingChange}
+                data-testid="input"
              />
 
                 <Link to='/understanding'>

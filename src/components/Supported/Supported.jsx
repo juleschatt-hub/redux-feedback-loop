@@ -24,6 +24,7 @@ function Supported() {
                 placeholder="1-5"
                 value={feedbackToAdd.support} 
                 onChange={handleSupportChange}
+                data-testid="input"
              />                
                 <Link to='/comments'>
                     <button type="button" onClick={() => dispatch({type: 'SET_SUPPORT', payload: feedbackToAdd.support})} data-testid="next">Next</button>

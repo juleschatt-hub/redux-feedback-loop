@@ -24,6 +24,7 @@ function Understanding() {
                 placeholder="1-5"
                 value={feedbackToAdd.understanding} 
                 onChange={handleUnderstandingChange}
+                data-testid="input"
              />                
                 <Link to='/supported'>
                     <button type="button" onClick={() => dispatch({type: 'SET_UNDERSTANDING', payload: feedbackToAdd.understanding})} data-testid="next">Next</button>

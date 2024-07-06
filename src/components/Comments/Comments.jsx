@@ -24,6 +24,7 @@ function Comments() {
                 placeholder="Comments"
                 value={feedbackToAdd.support} 
                 onChange={handleCommentsChange}
+                data-testid="input"
              />                
                 <Link to='/review'>
                     <button type="button" onClick={() => dispatch({type: 'SET_COMMENTS', payload: feedbackToAdd.comments})} data-testid="next">Next</button>
