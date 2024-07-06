@@ -20,25 +20,25 @@ const feedback = (state = {
 
     if(action.type === 'SET_FEELING') {
         return {
-            
+            ...state,
             feeling: action.payload
         } 
         }
     if(action.type === 'SET_UNDERSTANDING') {
         return {
-            
+            ...state,
             understanding: action.payload
         } 
         }
-    if(action.type === 'SET_SUPPORTED') {
+    if(action.type === 'SET_SUPPORT') {
         return {
-            
+            ...state,
             support: action.payload
         } 
         }
     if(action.type === 'SET_COMMENTS') {
         return {
-        
+            ...state,
             comments: action.payload
         } 
         }

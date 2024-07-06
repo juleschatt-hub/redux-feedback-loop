@@ -20,13 +20,13 @@ function Understanding() {
                 <label htmlFor="understanding">Understanding? </label>
                 <input 
                 type="number"  
-                id="feeling" 
+                id="understanding" 
                 placeholder="1-5"
                 value={feedbackToAdd.understanding} 
                 onChange={handleUnderstandingChange}
              />                
                 <Link to='/supported'>
-                    <button type="submit" onClick={() => dispatch({type: 'SET_UNDERSTANDING', payload: feedbackToAdd.understanding})} data-testid="next">Next</button>
+                    <button type="button" onClick={() => dispatch({type: 'SET_UNDERSTANDING', payload: feedbackToAdd.understanding})} data-testid="next">Next</button>
                 </Link>
             
         </>

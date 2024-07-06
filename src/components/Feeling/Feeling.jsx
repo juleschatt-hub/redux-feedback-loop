@@ -43,7 +43,7 @@ function Feeling() {
              />
 
                 <Link to='/understanding'>
-                    <button type="submit" onClick={() => dispatch({type: 'SET_FEELING', payload: feedbackToAdd.feeling})} data-testid="next">Next</button>
+                    <button type="button" onClick={() => dispatch({type: 'SET_FEELING', payload: feedbackToAdd.feeling})} data-testid="next">Next</button>
                 </Link>
                
         </>
