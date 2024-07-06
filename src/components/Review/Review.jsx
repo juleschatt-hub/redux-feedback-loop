@@ -25,13 +25,12 @@ const dispatch = useDispatch();
   }, [])
 
     const feedback = useSelector(store => store.feedback);
-    const addFeeling = (event) => {
+    const addFeedback = (event) => {
         event.preventDefault();
         axios.post('/api/feedback', feedback)
             .then((response) => {
                 console.log('Feeling post', response.data);
-                history.push('/thank');
-                console.log('feedback state after clear feedback dispatch', feedback);             
+                history.push('/thank');            
             })
             .catch((error) => {
                 console.log('error posting feeling:', error);
@@ -47,7 +46,7 @@ const dispatch = useDispatch();
             <h3>Understanding: {feedback.understanding}</h3>
             <h3>Support: {feedback.support}</h3>
             <h3>Comments: {feedback.comments}</h3>
-            <form onSubmit={(event) => addFeeling(event)}>
+            <form onSubmit={(event) => addFeedback(event)}>
                     <button type="submit" data-testid="next">Submit</button>
             </form>
         </>
