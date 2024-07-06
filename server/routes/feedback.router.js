@@ -4,13 +4,13 @@ const pool = require('../modules/pool')
 
 
 router.post('/', (req, res) => {
-    console.log(req.body);
     const newFeedback = req.body;
     const sqlText = `INSERT INTO feedback (feeling, understanding, support, comments) 
     VALUES ($1, $2, $3, $4)`;
-    console.log('new feedback:', newFeedback);
+    
      pool.query(sqlText, [newFeedback.feeling, newFeedback.understanding, newFeedback.support, newFeedback.comments])
         .then((result) => {
+            console.log('new feedback:', newFeedback);
             res.sendStatus(201);
         })
         .catch((error) => {
