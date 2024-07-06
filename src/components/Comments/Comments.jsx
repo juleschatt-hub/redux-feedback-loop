@@ -20,7 +20,7 @@ function Comments() {
                 <label htmlFor="comments">Comments </label>
                 <input 
                 type="text"  
-                id="support" 
+                id="comments" 
                 placeholder="Comments"
                 value={feedbackToAdd.support} 
                 onChange={handleCommentsChange}

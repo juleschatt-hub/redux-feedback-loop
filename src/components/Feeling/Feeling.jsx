@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import axios from 'axios';
+
 
 function Feeling() {
     const dispatch = useDispatch();
@@ -16,19 +16,6 @@ function Feeling() {
         });
     } //END HANDLE_FEELING_CHANGE
 
-    // const addFeeling = (event) => {
-    //     event.preventDefault();
-
-    //     axios.post('/api/feedback', {feeling: feedbackToAdd.feeling})
-    //         .then((response) => {
-    //             console.log('Feeling post', response.data);
-    //             // dispatch({type: 'SET_FEELING', payload: newGreeting});
-                
-    //         })
-    //         .catch((error) => {
-    //             console.log('error posting feeling:', error);
-    //         })
-    // }
     return (
         <>
             <h1>How are you feeling today? (1-5)</h1>
