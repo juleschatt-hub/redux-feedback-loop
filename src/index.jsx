@@ -42,7 +42,9 @@ const feedback = (state = {
             comments: action.payload
         } 
         }
-
+    if(action.type === 'CLEAR_FEEDBACk') {
+        return state
+    }
     return state
 } //END FEEDBACK REDUCER
 
