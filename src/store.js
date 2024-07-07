@@ -37,8 +37,15 @@ const feedback = (state = {
             comments: action.payload
         } 
         }
-    if(action.type === 'CLEAR_FEEDBACk') {
-        return state
+    if(action.type === 'CLEAR_FEEDBACK') {
+        return {
+            ...state,
+            feeling: '',
+            understanding: '',
+            support: '',
+            comments: ''
+        
+        }
     }
     return state
 } //END FEEDBACK REDUCER
